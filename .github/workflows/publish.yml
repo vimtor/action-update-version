@@ -11,4 +11,5 @@ jobs:
       - run: yarn install
       - uses: ./
         with:
+          version-regexp: 'v\d'
           repo-token: ${{ secrets.GITHUB_TOKEN }}
