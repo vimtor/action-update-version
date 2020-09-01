@@ -1,6 +1,6 @@
 {
   "name": "action-update-version",
-  "version": "0",
+  "version": "v1",
   "description": "Update your files version field on new releases",
   "main": "lib/main.js",
   "scripts": {
