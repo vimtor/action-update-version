@@ -1,0 +1,67 @@
+{
+  "name": "action-update-version",
+  "version": "0",
+  "description": "Update your files version field on new releases",
+  "main": "lib/main.js",
+  "scripts": {
+    "build": "tsc && yarn run package",
+    "lint": "eslint src --ext .tsx,.js,.ts",
+    "lint:fix": "yarn lint --fix",
+    "package": "ncc build --source-map --license licenses.txt",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pocket-studios/action-version-update.git"
+  },
+  "keywords": [
+    "actions",
+    "version",
+    "release",
+    "update",
+    "tag"
+  ],
+  "author": "Victor Navarro <victor@vnavarro.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "1.2.5",
+    "@actions/exec": "1.0.4",
+    "@actions/github": "4.0.0",
+    "yaml": "1.10.0"
+  },
+  "devDependencies": {
+    "@pocket-studios/eslint-config": "1.0.4",
+    "@types/node": "14.6.0",
+    "@vercel/ncc": "0.23.0",
+    "eslint": "6.8.0",
+    "typescript": "4.0.2",
+    "@typescript-eslint/eslint-plugin": "3.6.1",
+    "@typescript-eslint/parser": "3.7.1",
+    "eslint-config-airbnb": "18.2.0",
+    "eslint-plugin-cypress": "2.11.1",
+    "eslint-plugin-import": "2.22.0",
+    "eslint-plugin-jest": "23.20.0",
+    "eslint-plugin-jsx-a11y": "6.3.1",
+    "eslint-plugin-react": "7.20.0",
+    "eslint-plugin-react-hooks": "4.0.0",
+    "eslint-plugin-unused-imports": "0.1.3",
+    "husky": "4.2.5",
+    "lint-staged": "10.2.13"
+  },
+  "eslintConfig": {
+    "extends": [
+      "@pocket-studios/eslint-config"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,js,tsx}": [
+      "yarn lint:fix",
+      "yarn lint"
+    ]
+  }
+}

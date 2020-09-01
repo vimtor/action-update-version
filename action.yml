@@ -1,0 +1,38 @@
+name: Update Files Version Field
+description: Update your files version field on new releases
+author: Pocket Studios
+branding:
+  color: blue
+  icon: arrow-up-circle
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
+inputs:
+  files:
+    required: false
+    description: Comma separated list of files to update its version field
+    default: package.json
+  version-regexp:
+    required: false
+    description: Regex to match release tag name
+    default: '\d+.\d+.\d+'
+  author-name:
+    required: false
+    description: Commit author name
+  author-email:
+    required: false
+    description: Commit author email
+  branch-name:
+    required: false
+    description: Default branch name to push changes if not repo-token is provided
+  repo-token:
+    required: false
+    description: GitHub token to get the latest release in order to push to branch
+  commit-message:
+    required: false
+    description: Commit message for files update
+    default: 'ci: update version to v%version%'
+  spacing-level:
+    required: false
+    description: Spacing level for formatted files
+    default: '2'
