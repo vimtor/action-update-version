@@ -48,6 +48,7 @@ The action will fail if:
 - The regular expression cannot match the release tag
 - You specify a file with unsupported extension
 
+- Supported file extensions: `json`, `yaml` and `yml`. To add one simply submit a PR with a new parser on the `main.ts` file.
 
 ## ⚙ Inputs
 
@@ -68,4 +69,4 @@ author-email|Commit author email|*Release author email*
 
 ## 👋 Support
 
-- Supported file extensions: `json`, `yaml` and `yml`. To add one simply submit a PR with a new parser on the `main.ts` file.
+If you find our work useful, you can [support our work](https://github.com/sponsors/pocket-studios) and win a burrito 🌯
