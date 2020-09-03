@@ -7,9 +7,12 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - run: yarn install
-      - uses: ./
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Install Dependencies
+        run: yarn install
+      - name: Run Action
+        uses: ./
         with:
           version-regexp: '\d'
           repo-token: ${{ secrets.GITHUB_TOKEN }}

@@ -1,6 +1,9 @@
 <div align="center">
    <h1>☝ update-version</h1>
    <p>Update your files version field on new releases</p>
+   <p align="center">
+    <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/pocket-studios/action-update-version">
+   </p>
 </div>
 
 ## 🧠 Why
