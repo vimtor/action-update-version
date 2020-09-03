@@ -1,20 +1,16 @@
-name: Publish
+name: CI
 on:
-  release:
-    types: [published]
+  push
 
 jobs:
-  publish:
+  ci:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Install Dependencies
         run: yarn install
+      - name: Run Linters
+        run: yarn lint
       - name: Build Package
         run: yarn build
-      - name: Run Action
-        uses: ./
-        with:
-          version-regexp: '\d'
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
