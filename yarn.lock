@@ -175,10 +175,10 @@
   dependencies:
     "@types/node" ">= 8"
 
-"@pocket-studios/eslint-config@1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@pocket-studios/eslint-config/-/eslint-config-1.0.4.tgz#9bbfdf3f32f68c1ff983a240929484483d1b46dd"
-  integrity sha512-L9chYc1qjK8aW37fhU78smXfBp0evHMhejd2v7C4b0YLPM6yEh+PEbqXrEXdYoJ1sqPaLkxugM8c6pEpcZ4w7Q==
+"@pocket-studios/eslint-config@1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@pocket-studios/eslint-config/-/eslint-config-1.1.0.tgz#fd5c45126c8e9b715fc27811fe725eb82b53ef09"
+  integrity sha512-VjpScgNqGwArEdDd1ksLlVEX8SabFFQFWyYU11H0q8N5M3dHNhejOV60RdJnjXDpFD3qboboCyhWtiY1jhn+Ig==
 
 "@types/color-name@^1.1.1":
   version "1.1.1"
