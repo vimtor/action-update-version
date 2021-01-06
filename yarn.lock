@@ -1252,7 +1252,7 @@ eslint-plugin-react@7.21.5:
     resolve "^1.18.1"
     string.prototype.matchall "^4.0.2"
 
-eslint-plugin-replace-relative-imports@1.0.0, eslint-plugin-replace-relative-imports@^1.0.0:
+eslint-plugin-replace-relative-imports@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-replace-relative-imports/-/eslint-plugin-replace-relative-imports-1.0.0.tgz#5a6944d0459d56874270efc2ea9b72c12e43f66c"
   integrity sha512-I97BtxXUwBbDaThopVS/0ImTG1eYb5UlOVOlpKAREh9ZJI368FZKk77DpoC9r0v72yCHcRMT/wSTO/9cxix+uQ==
