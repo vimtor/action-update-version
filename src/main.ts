@@ -37,6 +37,7 @@ const run = async () => {
   let branch = core.getInput('branch-name');
   let author = core.getInput('author-name');
   let email = core.getInput('author-email');
+  let swagger = core.getInput('swagger');
 
   if (!token && !branch) {
     throw new Error('Either repo-token or branch-name must be supplied.');
@@ -84,6 +85,18 @@ const run = async () => {
     const buffer = fs.readFileSync(dir, 'utf-8');
     const parser = getParser(file, { spacing });
     const content = parser.read(buffer);
+
+    if (swagger) {
+      if (content.info.version === version) {
+        core.info(`  - ${file}: Skip since equal versions`);
+        return change;
+      }
+  
+      core.info(`  - ${file}: Update version from "${content.info.version}" to "${version}"`);
+      content.version = version;
+      fs.writeFileSync(dir, parser.write(content));
+      return true;
+    }
 
     if (content.version === version) {
       core.info(`  - ${file}: Skip since equal versions`);

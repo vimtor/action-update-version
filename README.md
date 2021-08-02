@@ -66,6 +66,7 @@ spacing-level|Number of spaces for formatted files|`2`
 branch-name|Default branch name to push changes if not repo-token is provided|*Release target branch* 
 author-name|Commit author name|*Release author name* 
 author-email|Commit author email|*Release author email* 
+swagger|To support swagger openapi structure|`null`
 
 ## 👋 Support
 
